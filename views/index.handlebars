@@ -1,0 +1,27 @@
+
+
+    <div id="wrapper">
+      {{{article}}}
+      <h1>Financial Times Scraper</h1>
+      <h2><i>Because the euro version of the Wall Street Journal is so much cooler</i></h2>
+      {{test}}
+      {{article}}
+      <div id="articles">
+      <ul>
+        {{#each articles}}
+       
+        <li><img src={{this.img}}></img>
+        <h5><a href = {{buildFtLink this.link}}>{{this.title}}</a></h5>
+        <p>{{this.summary}}</p>
+        <p>{{this.link}}</p>
+        <button type= "button" class="saveButton" data-id={{this._id}}>Save Article</button></li>
+        {{/each}}
+      </ul>
+      </div>
+      <div id="notes"></div>
+    </div>
+
+    
+    <script src="article.js"></script>
+
+
