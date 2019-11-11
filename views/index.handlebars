@@ -1,4 +1,8 @@
-
+<style>
+  .bullets {
+           list-style-type: none;
+  }
+</style>
 
     <div id="wrapper">
       {{{article}}}
@@ -7,13 +11,13 @@
       {{test}}
       {{article}}
       <div id="articles">
-      <ul>
+      <ul class="bullets">
         {{#each articles}}
        
         <li><img src={{this.img}}></img>
         <h5><a href = {{buildFtLink this.link}}>{{this.title}}</a></h5>
         <p>{{this.summary}}</p>
-        <p>{{this.link}}</p>
+     
         <button type= "button" class="saveButton" data-id={{this._id}}>Save Article</button></li>
         {{/each}}
       </ul>
